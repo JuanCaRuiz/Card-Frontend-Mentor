@@ -1,0 +1,128 @@
+@charset "UTF-8";
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+
+/*Este pedazo de codigo es tomado de box.sizing csstricks sirve para que se respeten los espacios dados*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  /*es igual a 10px y se pone asi para que sea mas facil manipular despues con la medida rem*/
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: var(--Dark-cyan);
+  background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  /*complemento del align item para centrar en vertical*/
+}
+
+.card {
+  background-color: white;
+  width: 327px;
+  /*ancho de la tarjeta*/
+  border-radius: 20px;
+  overflow: hidden;
+  /*se ajusta al tamaño dado*/
+  -webkit-box-shadow: 3px 3px 5px rgba(87, 87, 87, 0.65);
+          box-shadow: 3px 3px 5px rgba(87, 87, 87, 0.65);
+  color: var(--Very-dark-desaturated-blue);
+}
+
+.card-header {
+  /*el & reemplazo el nombre de la clase en este caso card */
+  width: 100%;
+  display: block;
+}
+
+.card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.712);
+}
+
+.card-body-user {
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: -53px;
+  background-color: white;
+}
+
+.card-body-name {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+.card-body-name span {
+  margin-left: .5rem;
+  font-weight: 400;
+  color: var(--Dark-gray);
+}
+
+.card-body-text {
+  color: var(--Dark-gray);
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.card-footer-social {
+  text-align: center;
+}
+
+.card-footer-social h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.8rem;
+}
+
+.card-footer-social p {
+  letter-spacing: 1px;
+  color: var(--Dark-gray);
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+/*# sourceMappingURL=estilos.css.map */
